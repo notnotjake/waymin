@@ -16,4 +16,28 @@ body {
 	margin-right: auto;
 	
 	background-color: #5353d6;
+	animation: animate 4s ease 15;
+}
+
+@keyframes animate {
+		0%{ background-color: color(display-p3 0.306 0.275 0.978 / 1); }
+		50%{ background-color: color(display-p3 0.233 0.479 1 / 1); }
+		100%{ background-color: color(display-p3 0.306 0.275 0.978 / 1); }
+}
+
+p {
+	font-size: 40pt;
+	color: color(display-p3 0 0.926 1 / 1);
+}
+
+@supports not (color: color(display-p3 1 1 1)) {
+	p { color: #42e9f9; }
+	
+	body{ background-color: #5353d6;}
+	
+	@keyframes animate {
+			0%{ background-color: #5858e4; }
+			50%{ background-color: #1727e1; }
+			100%{ background-color: #5858e4; }
+	}
 }
